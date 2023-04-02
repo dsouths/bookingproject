@@ -23,7 +23,7 @@ body {
 /***  Navigation  ***/
 
 nav {
-  font-size: 15px;
+  font-size: 25px;
   z-index: 5;
 }
 
@@ -83,7 +83,8 @@ img.logo {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin-top: -60px;
+  
+  margin-top: -100px;
   width: 50%;
   /* height: 110vh; */
   z-index: 2;
@@ -92,7 +93,7 @@ img.logo {
 
 
 .bg-home {
-  background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668551272/static/img/bg-home-md.jpg");
+  background-image: url("/static/assets/img/header-bg.jpg");
 }
 
 .btn-login {
