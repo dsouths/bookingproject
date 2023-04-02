@@ -1,40 +1,37 @@
-{%extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
+
+
 {% block content %}
+<div class="booknow-page d-flex justify-content-center">
+    <div class="text-center p-5">
+        <h2 class="bookings-title  mb-4">Book your appointment</h2>
+        {% if user.is_authenticated %}
+        <div class="booknow-contain text-left p-3">
+            <div class="mt-3">
 
-<div class="booking-page mt-5 pt-5 text-center">
+                <form method="POST" action="{% url 'booknow' %}" name="form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
 
-   <h3 class="text-center mb-5">Manage your Bookings</h3>
-   {% for b in bookings %}
-   <div class="card text-white bg-dark border-secondary">
-      <div class="card-body">
-         
-         <div class="booking-text text-left">
-            <p>Your booking ID is: {{b.id}} </p>
-            <p class="text-white"><b>On {{b.date}} at {{b.time}}</b></p>
-            <p>You booked:</p>
-            <p>{{b.service.service_name}}</p>
-            <p><b>Balance to pay: €{{b.service.price}}</b></p>
-            
-            <a href="{% url 'change_booking' b.id %}"
-               class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3">
-               <i class="fa-solid fa-pen-to-square"></i> Change</a>
-            <a href="{% url 'delete_booking' b.id %}"
-               class="card-link btn btn-outline-warning btn-book-warning mt-3 mb-3">
-               <i class="fa-solid fa-trash-can"></i> Delete</a>
+                    
+                        <button class="btn btn-outline-warning" type="submit">Submit
+                            Booking</button>
+                    
+                </form>
+            </div>
+            {% else %}
+            <div class="booknow-block d-flex">
 
-         </div>
-      </div>
-   </div>
-   {% empty %}
-   <div class="booknow-msg p-2">
-      <p class="pt-2">You have no bookings at the moment.
-          Click the button <a href="{%url 'booknow' %}" class="orange">Book Now</a> to make a booking.</p>
-   </div>
-   
-
-   {% endfor %}
-
+                <div class="p-3  text-left">
+                    <p >To make a reservation, please <a href="/accounts/login/">login</a></p>
+                    <p>If you have not created an account yet, then please <a href="/accounts/signup/">sign up</a></p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
 
-{% endblock content %}
+{% endblock %}

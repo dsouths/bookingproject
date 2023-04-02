@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- The page to delete a booking -->
+
+<div class="d-flex">
+    <div class=" text-center m-auto p-5">
+        <!-- <div class="col-md-8 mt-3 text-center"> -->
+        <h2 class="bookings-title mb-4">Delete your Booking</h2>
+
+
+        <form method="POST">
+        {% csrf_token %}
+
+        <div class="delete-contain align-items-center">
+
+            <div class="delete-block pb-3 delete-block text-center">
+                <p>You are about to delete your booking.</p>
+
+                <button class="delete-btn btn btn-outline-warning mb-2 text-danger" type="submit"> <i
+                        class="fa-solid fa-trash-can text-danger"></i> Yes,
+                    delete booking</button>
+                <a class="btn btn-outline-warning mx-auto mb-2" href="{% url 'bookings' %}" role="button">Back to my bookings
+                </a>
+            </div>
+
+        </div>
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock content %}

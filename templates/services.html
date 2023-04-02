@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="services-page signup-page">
+
+    <h1 class="services-title mt-1 mb-1 text-center">Our Services</h1>
+    <div class="services-contain col-xs-10 col-sm-10 col-md-6 d-flex">
+        <div class="pb-5 services-block" id="services-content">
+            <h3 class="title-block-services text-center pt-2 pb-2 mb-0">Choose a service</h3>
+
+            <div class="services">
+                {% for s in services%}
+                <div class="services-item">
+                    <div class="text-left button-padding ml-2">
+                        <p><b>{{s.service_name}}</b></p>
+                    </div>
+                    <div class="text-right pull-right">
+                        <a class="btn btn-light mr-2" href="{% url 'booknow' %}">
+                            <span>€{{s.price}}</span></a>
+                    </div>
+
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
