@@ -34,3 +34,9 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ('name', 'phone', 'email', 'service', 'date', 'time')
         widgets = {'date': DateInput()}
+    
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        if date.weekday() >= 5:  # Saturday or Sunday
+            raise forms.ValidationError("Bookings are only available from Monday to Friday.")
+        return date

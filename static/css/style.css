@@ -23,7 +23,7 @@ body {
 /***  Navigation  ***/
 
 nav {
-  font-size: 25px;
+  font-size: 20px;
   z-index: 5;
 }
 
@@ -93,7 +93,8 @@ img.logo {
 
 
 .bg-home {
-  background-image: url("/static/assets/img/header-bg.jpg");
+  background-image: url("/static/assets/img/landing.jpg");
+  
 }
 
 .btn-login {
@@ -106,7 +107,7 @@ img.logo {
   font-weight: 500;
   text-decoration: none;
   color: #312E38;
-  background-color: #FF9000;
+  background-color: #ffcc00;
   cursor: pointer;
   user-select: none;
   appearance: none;
@@ -115,7 +116,7 @@ img.logo {
 }
 
 .btn-login:hover {
-  background-color: #ffcc00;
+  background-color: #FF9000;
   text-decoration: none;
 }
 
@@ -137,7 +138,7 @@ img.logo {
 /*** Services page ***/
 
 .services-page {
-  background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668434943/static/img/bg-services.jpg");
+  background-image: url("/static/assets/img/services2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

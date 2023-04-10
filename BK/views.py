@@ -21,6 +21,7 @@ def services(request):
     services = Service.objects.all()
     return render(request, 'services.html', {'services': services})
 
+
 def booknow(request):
     """The view for the booking page. If user is logged in it renders the
     booknow.html, otherwise it redirects user to the login page or signup page.

@@ -8,7 +8,7 @@ from django.core.validators import RegexValidator
 
 class Service(models.Model):
     """The model is used to display data about the services
-    provided by the barbershop
+    provided by the dental practice
     """
     service_name = models.CharField(max_length=150, unique=True)
     price = models.DecimalField(max_digits=5, decimal_places=2)
@@ -38,6 +38,14 @@ HOURS = (
     ('16:30', '16:30'),
 )
 
+DAYS = (
+    ('Mon', 'Mon'),
+    ('Tues', 'Tues'),
+    ('Wed', 'Wed'),
+    ('Thurs', 'Thurs'),
+    ('Fri', 'Fri'),
+
+)
 
 class Booking(models.Model):
 
