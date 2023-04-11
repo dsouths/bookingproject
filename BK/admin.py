@@ -4,6 +4,7 @@ from BK.models import Booking
 
 # Register your models here.
 
+@admin.register(Dentist)
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):

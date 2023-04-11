@@ -1,5 +1,5 @@
 from django import forms
-from .models import Booking
+from .models import Booking, Dentist
 from django.core.validators import MinValueValidator
 import datetime
 
@@ -34,6 +34,8 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ('name', 'phone', 'email', 'service', 'date', 'time')
         widgets = {'date': DateInput()}
+    
+    dentist = forms.ModelChoiceField(queryset=Dentist.objects.all())
     
     def clean_date(self):
         date = self.cleaned_data['date']

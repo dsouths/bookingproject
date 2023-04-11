@@ -41,7 +41,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
             <li class="nav-item"><a class="nav-link text-white" href="{% url 'index' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="{% url 'services' %}">Services</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="{% url 'services' %}">Services<li>
             {% if user.is_authenticated %}
             <li class="nav-item"><a class="nav-link text-white" href="{% url 'bookings' %}">My bookings</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a></li>

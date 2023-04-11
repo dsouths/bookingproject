@@ -135,9 +135,9 @@ img.logo {
 }
 
 
-/*** Services page ***/
+/*** services page ***/
 
-.services-page {
+.servicesage {
   background-image: url("/static/assets/img/services2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -205,7 +205,7 @@ img.logo {
 /*** Booknow page ***/
 
 .booknow-page {
-  background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668434943/static/img/bg-services.jpg");
+  background-image: url("/static/assets/img/booknow.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -353,7 +353,7 @@ img.logo {
 
 /* for screens that are 320px wide or less */
 @media (max-width: 320px) {
-  /* .services-item, .btn-light {
+  /* .servicesm, .btn-light {
       font-size: 0.8rem;
   } */
 

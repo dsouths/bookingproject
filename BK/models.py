@@ -38,14 +38,18 @@ HOURS = (
     ('16:30', '16:30'),
 )
 
-DAYS = (
-    ('Mon', 'Mon'),
-    ('Tues', 'Tues'),
-    ('Wed', 'Wed'),
-    ('Thurs', 'Thurs'),
-    ('Fri', 'Fri'),
 
-)
+class Dentist(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+def get_default_dentist():
+    default_dentist, created = Dentist.objects.get_or_create(name="Dr Goodteeth")
+    return default_dentist.id
+
 
 class Booking(models.Model):
 
@@ -64,6 +68,7 @@ class Booking(models.Model):
                              null=True, blank=True)
     date = models.DateField()
     time = models.CharField(max_length=30, choices=HOURS, default='10:00')
+    dentist = models.ForeignKey(Dentist, on_delete=models.CASCADE, default=get_default_dentist)
 
     class Meta:
         unique_together = ('user', 'date', 'time', 'service')
