@@ -14,6 +14,8 @@
             <p class="text-white"><b>On {{b.date}} at {{b.time}}</b></p>
             <p>You booked:</p>
             <p>{{b.service.service_name}}</p>
+            <p>Dentist:</p>
+            <p>{{ b.dentist.name }}</p>
             <p><b>Balance to pay: €{{b.service.price}}</b></p>
             
             <a href="{% url 'change_booking' b.id %}"

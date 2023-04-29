@@ -11,9 +11,13 @@
 body {
   font-family: 'Roboto Slab', serif;
   height: 100%;
-  background-color: #312E38;
+  background-color: #333d51;
   color: #fff;
   margin: 0;
+}
+
+.wrapper {
+  background-color: #93A6A5;  
 }
 
 .errorlist {
@@ -32,7 +36,7 @@ border-bottom: 2px solid transparent;
 }
 
 a.nav-link:hover {
-  border-bottom: 2px solid #FF9000;
+  border-bottom: 2px solid #F6C026;
 }
 
 .book-now {
@@ -42,59 +46,60 @@ a.nav-link:hover {
 /***  Buttons styles ***/
 
 .btn-login {
-  border: 1px solid #FF9000;
-  background-color: #FF9000;
-  color: #312E38;
+  border: 1px solid #F6C026;
+  background-color: #F6C026;
+  color: #333d51;
   padding: 10px 85px;
   height: 50px;
 }
 
 .btn-outline-warning {
-  border-color: #FFA500;
-  color: #FFA500;
+  border-color: #F6C026;
+  color: #F6C026;
 }
 
 .btn-outline-warning:hover,
 .btn-outline-warning:focus,
 .account-btn:hover,
 .account-btn:focus {
-  color: #312E38;
-  background-color: #FFA500;
-  /* border-color: #FFA500; */
+  color: #333d51;
+  background-color: #F6C026;
+  
 }
-
-
-
 
 /*** Index page ***/
-
-.half-block {
-  width: 50%;
-  height: 100vh;
-}
-
-img.logo {
-  width: 230px;
-  height: 130px;
-}
-
 
 .half-bg {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  
-  margin-top: -100px;
-  width: 50%;
-  /* height: 110vh; */
+  width: 100%;
+  height: 100vh; 
   z-index: 2;
 }
 
+.half-block {
+  width: 60%;
+  height: 100vh;
+}
 
 
 .bg-home {
-  background-image: url("/static/assets/img/landing.jpg");
+  background-image: url("/static/assets/img/booknow.jpg");
   
+}
+
+.background-box {
+
+  position: absolute;
+  top: 50%; /* adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333d51;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2.5px solid #F6C026;
+  width: 350px;
 }
 
 .btn-login {
@@ -106,7 +111,7 @@ img.logo {
   line-height: 32px;
   font-weight: 500;
   text-decoration: none;
-  color: #312E38;
+  color: #333d51;
   background-color: #ffcc00;
   cursor: pointer;
   user-select: none;
@@ -116,17 +121,17 @@ img.logo {
 }
 
 .btn-login:hover {
-  background-color: #FF9000;
+  background-color: #F6C026;
   text-decoration: none;
 }
 
 .btn-login:active {
-  background-color: #FFA500;
+  background-color: #F6C026;
   color: #000;
 }
 
 .orange {
-  color: #FF9000;
+  color: #F6C026;
 }
 
 .orange:hover {
@@ -137,7 +142,7 @@ img.logo {
 
 /*** services page ***/
 
-.servicesage {
+.services-page {
   background-image: url("/static/assets/img/services2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -167,8 +172,7 @@ img.logo {
 
 
 .services {
-  /* background-color: #fff;
-  opacity: 0.8; */
+  
   color: #000;
 }
 
@@ -261,7 +265,7 @@ img.logo {
 /* Login page */
 
 .bg-login{
-  background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668536649/static/img/bg-login-md.jpg");
+  background-image: url("/static/assets/img/services2.jpg");
   /* background-position: 0 0; */
   z-index: 2;
 }
@@ -270,8 +274,16 @@ img.logo {
 /* Sign Up page */
 
 .bg-signup {
-  background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668616044/static/img/bg-register-md.png");
+  background-image: url("/static/assets/img/header-bg.jpg");
   /* background-position: 0 0; */
+}
+
+.signup h3, .signup p, .signup a, .signup label {
+  color: #000;
+}
+
+.account-link {
+  color: #F6C026;
 }
 
 .form {
@@ -283,7 +295,7 @@ img.logo {
 
 /* Logout page */  
 .bg-logout {
-  background-image: url("https://res.cloudinary.com/drnlhcap9/image/upload/v1668543776/static/img/bg-logout.jpg");
+  background-image: url("/static/assets/img/logout.jpg");
   z-index: 2;
 }
 
@@ -353,9 +365,6 @@ img.logo {
 
 /* for screens that are 320px wide or less */
 @media (max-width: 320px) {
-  /* .servicesm, .btn-light {
-      font-size: 0.8rem;
-  } */
 
   a.btn-light {
       padding: 4px 10px;

@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Service
+from .models import Service, Dentist
 from BK.models import Booking
 
 # Register your models here.
 
-@admin.register(Dentist)
+admin.site.register(Dentist)
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
