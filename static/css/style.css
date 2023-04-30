@@ -43,6 +43,81 @@ a.nav-link:hover {
   font-size: 15px;
 }
 
+.navbar-brand {
+  font-family: 'Zeyada', sans-serif;
+  font-size: 50px;
+  color: #F6C026 !important;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:active {
+  
+  /* Apply the push button effect */
+  transform: scale(0.9);
+}
+
+/* Footer */
+
+footer {
+  background-color: #333d51;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+  color: #F6C026;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #F6C026;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
 /***  Buttons styles ***/
 
 .btn-login {
@@ -143,7 +218,7 @@ a.nav-link:hover {
 /*** services page ***/
 
 .services-page {
-  background-image: url("/static/assets/img/services2.jpg");
+  background-image: url("/static/assets/img/services.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -236,9 +311,6 @@ a.nav-link:hover {
   color: #FF9000;
 }
 
-
-
-
 /*** Bookings page ***/
 
 .card {
@@ -260,8 +332,6 @@ a.nav-link:hover {
   border-radius: 5px;
 }
 
-
-
 /* Login page */
 
 .bg-login{
@@ -269,7 +339,6 @@ a.nav-link:hover {
   /* background-position: 0 0; */
   z-index: 2;
 }
-
 
 /* Sign Up page */
 
@@ -299,8 +368,6 @@ a.nav-link:hover {
   z-index: 2;
 }
 
-
-
 /*** Media queries  ***/
 
 /* for screens that are 1024px wide or less */
@@ -312,6 +379,7 @@ a.nav-link:hover {
   .form {
       width: 75%;       
   }
+
 }
 
 /* for screens that are 912px wide or less */
@@ -321,8 +389,21 @@ a.nav-link:hover {
       width: 100%;
   }
 
-  .half-bg {
-      display: none;
+  .bg-home {
+    background-image: url("/static/assets/img/signin.jpg");
+    
+  }
+
+  .navbar-brand,
+  .book-now-btn {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .book-now-btn {
+    margin-top: 10px;
   }
 
 
